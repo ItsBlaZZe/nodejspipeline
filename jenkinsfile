@@ -6,7 +6,7 @@ node {
         gitcommit = readFile('.git/commit-id').trim()
     }
     stage('Test') {
-        nodejs(nodeJSInstallationName: 'NodeJS) { // Ensure this matches the name configured in Jenkins
+        nodejs(nodeJSInstallationName: 'NodeJS') { 
             sh 'npm install --only=dev'
             sh 'npm test'
         }
